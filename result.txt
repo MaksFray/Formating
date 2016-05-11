@@ -1,0 +1,12 @@
+JSONObject reader;
+try{
+    reader = new;
+    ponse.toString());
+    try{
+        magic.fn;
+    }
+}
+catch (JSONException e){
+    e.printStackTrace();
+    try{
+    }
