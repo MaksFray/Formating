@@ -1,5 +1,6 @@
 
 
+import com.namy.helper.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -19,7 +20,7 @@ public class HelperTest {
     public static void tearDownClass() {
     }
 
-
+/*
     @Test(expected = NullPointerException.class)
     public void testHelpNull() {
         String s = null;

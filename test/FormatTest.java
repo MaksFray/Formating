@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import com.namy.formating.Format;
+import com.namy.helper.Helper;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -29,6 +31,7 @@ public class FormatTest {
     /**
      * Test of format method, of class Format.
      */
+    /*
     @Test
     public void testFormatEmpty() {
         String s = "";
@@ -46,35 +49,5 @@ public class FormatTest {
         String result = instance.format(s);
         assertEquals(expResult, result);
     }
-
-    /**
-     * Test of prepare method, of class Format.
-     */
-    @Test(expected = NullPointerException.class)
-    public void testPrepareNull() {
-        String s = null;
-        Format instance = new Format(new Helper());
-        String expResult = null;
-        String result = instance.prepare(s);
-        assertEquals(expResult, result);
-    }
-    
-    @Test
-    public void testPrepareEmpty() {
-        String s = "";
-        Format instance = new Format(new Helper());
-        String expResult = "";
-        String result = instance.prepare(s);
-        assertEquals(expResult, result);
-    }
-    
-    @Test
-    public void testPrepareLine() {
-        String s = " “[|]’~<!--@/*$%^&#*/()?>,.*'/\\";
-        Format instance = new Format(new Helper());
-        String expResult = " “[|]’~<!--@/*$%^&#*/()?>,.*'/\\";
-        String result = instance.prepare(s);
-        assertEquals(expResult, result);
-    }
-    
+    */
 }

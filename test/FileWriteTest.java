@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import com.namy.writing.FileWrite;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -29,6 +30,7 @@ public class FileWriteTest {
     /**
      * Test of write method, of class FileWriter.
      */
+    /*
     @Test(expected = NullPointerException.class)
     public void testWrite() {
         System.out.println("write");
@@ -36,5 +38,5 @@ public class FileWriteTest {
         FileWrite instance = null;
         instance.write(s);
     }
-    
+    */
 }
