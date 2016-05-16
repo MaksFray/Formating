@@ -1,12 +1,11 @@
-String fm = "JSONObject reader;
+JSONObject reader;
 try{
-    reader = new;
-    ponse.toString());
-    try {
+    reader = new JSONObject(response.toString());
+     try{
         magic.fn;
     }
 }
-catch (JSONException e) {
+catch(JSONException e) {
     e.printStackTrace();
-    try {
-        ";
+     try {
+    }

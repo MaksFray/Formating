@@ -32,7 +32,7 @@ public class HelperTest {
 
     /**
      * Test of repeat method, of class Helper.
-     */
+     
     @Test
     public void testRepeatEmptyResult() {
         char c = 'm';
@@ -52,5 +52,6 @@ public class HelperTest {
         String result = instance.repeat(c, times);
         assertEquals(expResult, result);
     }
+    */
     
 }
