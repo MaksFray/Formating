@@ -1,6 +1,6 @@
 package com.namy.state;
 
-import com.namy.helper.Helper;
+import com.namy.formating.Helper;
 import static java.lang.String.valueOf;
 
 public class MiddleLine implements IState {

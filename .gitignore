@@ -1,3 +1,5 @@
+*.class
+/dist/
 nbproject/private/
 build/
 nbbuild/

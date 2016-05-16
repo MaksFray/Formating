@@ -1,13 +1,9 @@
 package com.namy.formating;
 
-import com.namy.helper.IHelper;
 import com.namy.reading.IReader;
 import com.namy.reading.ReadException;
 import com.namy.writing.IWriter;
 import com.namy.writing.WriteException;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 public class Format implements IFormat {

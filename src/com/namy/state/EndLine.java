@@ -1,6 +1,6 @@
 package com.namy.state;
 
-import com.namy.helper.Helper;
+import com.namy.formating.Helper;
 
 public class EndLine implements IState {
 

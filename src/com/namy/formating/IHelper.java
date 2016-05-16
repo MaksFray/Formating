@@ -1,4 +1,4 @@
-package com.namy.helper;
+package com.namy.formating;
 
 
 public interface IHelper {

@@ -1,4 +1,4 @@
-package com.namy.helper;
+package com.namy.formating;
 
 import com.namy.state.EndLine;
 import com.namy.state.IState;
@@ -7,7 +7,7 @@ import static java.lang.Integer.valueOf;
 import java.util.HashMap;
 
 /**
- * Class with rules
+ * Class for changes char
  */
 public class Helper implements IHelper {
 
@@ -18,7 +18,6 @@ public class Helper implements IHelper {
     public int checkspace;
     public int currentlevel;
     public char symbol;
-    final private EndLine checkstate = new EndLine();
     public StringBuilder f = new StringBuilder(); ;
     public String ret;
     
@@ -47,7 +46,6 @@ public class Helper implements IHelper {
             {
                 plus++;
                 checkspace=plus-minus;
-                
             }
         }
         currentlevel=checkspace;

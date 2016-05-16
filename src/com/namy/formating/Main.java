@@ -1,7 +1,6 @@
 package com.namy.formating;
 
 
-import com.namy.helper.*;
 import com.namy.reading.*;
 import com.namy.writing.*;
 import java.io.FileInputStream;

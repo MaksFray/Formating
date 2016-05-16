@@ -5,7 +5,7 @@
  */
 
 import com.namy.formating.Format;
-import com.namy.helper.Helper;
+import com.namy.formating.Helper;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
