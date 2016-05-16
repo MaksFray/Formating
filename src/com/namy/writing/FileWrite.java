@@ -7,24 +7,28 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FileWrite implements IWriter {
 
-
-
-    
     private String filename;
     private Writer writer;
 
-    public FileWrite(final String filename) throws WriteException{
+    public FileWrite(final String filename) {
+        this.filename = filename;
+    }
+    /**
+     * Open the writing stream
+     */
+    @Override
+    public void write() {
         try {
-            this.filename = filename;
             writer = new OutputStreamWriter(new FileOutputStream(filename));
-        } catch (IOException ex) {
-            throw new WriteException(ex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FileWrite.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
 
     /**
      * 
@@ -32,26 +36,21 @@ public class FileWrite implements IWriter {
      * @param line - intermediate result of formating 
      */
     @Override
-    public void writeLine(String line) throws WriteException{
+    public void writeLine(String line) {
         try {
             writer.write(line);
             writer.flush();
         } catch (IOException ex) {
-             throw new WriteException(ex);
+            Logger.getLogger(FileWrite.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
     /**
      * Close output stream
      */
-    public void close() throws WriteException
+    public void close() throws IOException
     {
-        try {
-            writer.close();
-        }catch (IOException ex) {
-            throw new WriteException(ex);
-        }
-        
+        writer.close();
     }
 
 }

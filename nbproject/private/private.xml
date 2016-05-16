@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Program/Java/Java%20prog/FormatingState/src/com/namy/formating/Format.java</file>
-            <file>file:/E:/Program/Java/Java%20prog/FormatingState/src/com/namy/helper/Helper.java</file>
-            <file>file:/E:/Program/Java/Java%20prog/FormatingState/src/com/namy/state/MiddleLine.java</file>
-            <file>file:/E:/Program/Java/Java%20prog/FormatingState/src/com/namy/state/EndLine.java</file>
-            <file>file:/E:/Program/Java/Java%20prog/FormatingState/src/com/namy/state/StartLine.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/src/FileRead.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/test/FormatTest.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/src/Helper.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/src/Main.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/test/HelperTest.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/test/FileWriteTest.java</file>
+            <file>file:/E:/Program/Java/Java%20prog/Formating/test/FileReadTest.java</file>
         </group>
     </open-files>
 </project-private>

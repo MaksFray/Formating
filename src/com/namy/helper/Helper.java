@@ -1,9 +1,6 @@
 package com.namy.helper;
 
-import com.namy.state.EndLine;
-import com.namy.state.IState;
-import com.namy.state.MiddleLine;
-import static java.lang.Integer.valueOf;
+
 import java.util.HashMap;
 
 /**
@@ -11,72 +8,47 @@ import java.util.HashMap;
  */
 public class Helper implements IHelper {
 
-    private IState current_state;
-    public HashMap<Character, Integer> m = new HashMap();
-    public int indentcounter;
-    public String indent;
-    public int checkspace;
-    public int currentlevel;
-    public char symbol;
-    final private EndLine checkstate = new EndLine();
-    public StringBuilder f = new StringBuilder(); ;
-    public String ret;
-    
-    
-    int plus=0,minus=0;
+    HashMap<Character, Integer> m = new HashMap();
+    int checkspace;
+    int currentlevel;
 
-    public Helper(String indent, String indentcounter) {
-        this.indent = indent;
-        this.indentcounter = valueOf(indentcounter);
-        current_state = new MiddleLine();
-        m.put('{', 1);
-        m.put('}', -1);
+    public Helper() {
+        m.put('{', 4);
+        m.put('}', -4);
         m.put(';', 0);
         checkspace = 0;
     }
 
     /**
-     *
+     * 
      * check sybmols from map
      */
     @Override
-    public String help(char symbol){
+    public void help(char symbol) {
         currentlevel = 0;
         if (m.containsKey(symbol)) {
-            if (symbol == '{')
-            {
-                plus++;
-                checkspace=plus-minus;
-                
+            checkspace += m.get(symbol);
+            if (symbol == '}') {
+                currentlevel = checkspace;
+            } else {
+                currentlevel = checkspace - m.get(symbol); //приращение функции
             }
         }
-        currentlevel=checkspace;
-
-        if(symbol=='}' && m.containsKey(symbol)){
-            minus++;
-            currentlevel=plus-minus;
-            checkspace--;
-        }
-
-        nextState();
-        nextState();
-        this.symbol = symbol;
-        nextState();
-        
-        f.append(symbol);
-        ret = f.toString();
-        f.delete(0, f.length());
-        return ret;
     }
 
     @Override
     public String currentLevel() {
         String spaces = "";
-        spaces = repeat(' ', currentlevel*indentcounter);
+        spaces = repeat(' ', currentlevel);
         return spaces.toString();
     }
-    
-    
+
+    @Override
+    public boolean hasSymbol(char symbol) {
+        boolean check = false;
+        check = (m.containsKey(symbol)) ? true : false;
+        return check;
+    }
 
     public String repeat(char c, int times) {
         StringBuffer b = new StringBuffer();
@@ -86,16 +58,4 @@ public class Helper implements IHelper {
         return b.toString();
     }
 
-    public void nextState() {
-        current_state.nextState(this);
-    }
-
-    public void setState(IState s) {
-        current_state = s;
-    }
-
-    public void setFin(String string) {
-        f.append(string);
-    }
-    
 }

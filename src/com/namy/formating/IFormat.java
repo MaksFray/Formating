@@ -6,5 +6,5 @@ import com.namy.writing.IWriter;
 
 public interface IFormat {
 
-    public void format(final IReader reader, final IWriter writer) throws FormatException;
+    public void format(final IReader reader, final IWriter writer);
 }
