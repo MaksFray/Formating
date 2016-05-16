@@ -5,28 +5,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-
 public class FileRead implements IReader {
 
     String filename;
     Reader in;
     int symbol;
 
-    public FileRead(String filename) {
-        this.filename = filename;
-        symbol = 0;
-    }
-
-    /**
-     *
-     * Open the reading stream
-     */
-    @Override
-    public void read() {
+    public FileRead(String filename) throws ReadException {
         try {
+            this.filename = filename;
             in = new InputStreamReader(new FileInputStream(filename));
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (IOException ex) {
+            throw new ReadException(ex);
         }
     }
 
@@ -35,25 +25,31 @@ public class FileRead implements IReader {
      * read one symbol
      *
      * @return one symbol
+     * @throws com.namy.reading.ReadException
      */
     @Override
-    public int readSymbol() throws IOException {
-        symbol = in.read();
-        return symbol;
-    }
+    public int readSymbol() throws ReadException {
+        try {
+            symbol = in.read();
+            if (symbol == -1) {
+                throw new ReadException(new Exception("End file"));
+            }
+            return symbol;
+        } catch (IOException ex) {
+            throw new ReadException(ex);
+        }
 
-    public boolean hasSymbol() {
-        boolean check = true;
-        int temp = 0;
-        temp = symbol;
-        check = !(temp == -1); //-1 is the end of file
-        return check;
     }
 
     /**
      * Close input
      */
-    public void close() throws IOException {
-        in.close();
+    public void close() throws ReadException {
+        try {
+            in.close();
+        } catch (IOException ex) {
+            throw new ReadException(ex);
+        }
     }
+
 }

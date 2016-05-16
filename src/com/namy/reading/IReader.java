@@ -1,14 +1,12 @@
 package com.namy.reading;
 
+import java.io.Closeable;
 import java.io.IOException;
 
-public interface IReader {
+public interface IReader{
 
-    public void read();
+    public int readSymbol() throws ReadException;
 
-    public int readSymbol() throws IOException;
+    public void close() throws ReadException;
 
-    public void close() throws IOException;
-
-    public boolean hasSymbol();
 }
