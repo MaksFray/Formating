@@ -1,11 +1,1 @@
-JSONObject reader;
-try{
-    reader = new JSONObject(response.toString());
-     try{
-        magic.fn;
-    }
-}
-catch(JSONException e) {
-    e.printStackTrace();
-     try {
-    }
+JSONObject reader;try{reader = new JSONObject(response.toString()); try{magic.fn;}}catch(JSONException e) {e.printStackTrace(); try {}

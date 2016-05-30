@@ -14,7 +14,7 @@ import org.junit.runners.Suite;
  * @author Fray
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({FileReadTest.class,FormatTest.class,FileWriteTest.class,HelperTest.class})
+@Suite.SuiteClasses({FileReadTest.class,StringReadTest.class,FormatTest.class,FileWriteTest.class})
 public class RootSuite {
 
     @BeforeClass

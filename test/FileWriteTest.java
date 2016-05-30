@@ -5,6 +5,8 @@
  */
 
 import com.namy.writing.FileWrite;
+import com.namy.writing.IWriter;
+import com.namy.writing.WriteException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -30,13 +32,10 @@ public class FileWriteTest {
     /**
      * Test of write method, of class FileWriter.
      */
-    /*
+    
     @Test(expected = NullPointerException.class)
-    public void testWrite() {
-        System.out.println("write");
+    public void testWrite() throws WriteException {
         String s = "";
-        FileWrite instance = null;
-        instance.write(s);
+        IWriter instance = new FileWrite("");
     }
-    */
 }

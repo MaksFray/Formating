@@ -1,7 +1,5 @@
 package com.namy.reading;
 
-import java.io.Closeable;
-import java.io.IOException;
 
 public interface IReader{
 

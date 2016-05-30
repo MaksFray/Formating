@@ -27,13 +27,13 @@ public class Main {
         }
         
         
-        IReader read = new FileRead("test.txt");
-        IWriter write = new FileWrite("result.txt");
+        //IReader read = new FileRead("test.txt");
+        //IWriter write = new FileWrite("result.txt");
         
-        //IReader read = new StringRead("JSONObject reader;try{reader = new JSONObject(response.toString()); try{magic.fn;}}catch(JSONException e) {e.printStackTrace(); try {}");
-        //IWriter write = new StringWrite();
+        IReader read = new StringRead("JSONObject reader;try{reader = new JSONObject(response.toString()); try{magic.fn;}}catch(JSONException e) {e.printStackTrace(); try {}}");
+        IWriter write = new StringWrite();
         
-        IHelper help = new Helper(indent,counter);
+        ICollector help = new Collector(indent,counter);
         Format format = new Format(help);
         
         format.format(read, write);
